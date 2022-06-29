@@ -12,7 +12,7 @@ class RegisterPage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 300,
+            height: 150,
             width: double.infinity,
             decoration: const BoxDecoration(
               color: Colors.blue,
@@ -34,12 +34,12 @@ class RegisterPage extends StatelessWidget {
             child: Row(
               children: [
                 const CustomText(
-                  text: 'Sign In',
+                  text: 'Register',
                   textColor: Colors.black,
                   fontSize: 35,
                 ),
                 const SizedBox(
-                  width: 130,
+                  width: 100,
                 ),
                 Row(
                   children: const [
@@ -74,29 +74,58 @@ class RegisterPage extends StatelessWidget {
                   fontSize: 14,
                 )),
           ),
-          const SizedBox(
-            height: 2,
-          ),
-          TextFormField(
-            onEditingComplete: () {},
-            style: const TextStyle(
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
-            ),
-            decoration: InputDecoration(
-              hintText: 'enter your phone number ',
-              hintStyle: const TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w600,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              onEditingComplete: () {},
+              style: const TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
               ),
-              contentPadding: const EdgeInsets.all(8),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(1),
+              decoration: InputDecoration(
+                hintText: 'enter your phone number ',
+                hintStyle: const TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                ),
+                contentPadding: const EdgeInsets.all(8),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
               ),
             ),
           ),
-          const SizedBox(
-            height: 15,
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: CustomText(
+                text: 'Password',
+                textColor: Colors.black54,
+                fontSize: 14,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              onEditingComplete: () {},
+              style: const TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
+              ),
+              decoration: InputDecoration(
+                hintText: 'password',
+                hintStyle: const TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                ),
+                contentPadding: const EdgeInsets.all(8),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
+              ),
+            ),
           ),
           Container(
             width: double.infinity,
@@ -105,29 +134,33 @@ class RegisterPage extends StatelessWidget {
             child: const CustomButton(
               textColor: Colors.white,
               buttonColor: Colors.blue,
-              buttonText: 'Login',
+              buttonText: 'Register',
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(30),
+            padding: const EdgeInsets.all(8.0),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 CustomText(
-                    text: 'Does not have any account ?',
-                    textColor: Colors.black54),
+                    text: 'Have any account ? ', textColor: Colors.black54),
                 CustomText(
-                  text: 'Register now',
+                  text: 'Sign here',
                   textColor: Colors.blue,
                 ),
               ],
             ),
           ),
           const CustomText(
-            text: 'Use the application according to policy rules.'
-                ' \nAny kind of violation will be subject to sanction',
+            text: 'By registering your account.you are agree to our  ',
             textColor: Colors.black54,
             textHeight: 1.3,
-          )
+          ),
+          const CustomText(
+            text: 'Terms and conditions',
+            textColor: Colors.blue,
+          ),
         ],
       ),
     );

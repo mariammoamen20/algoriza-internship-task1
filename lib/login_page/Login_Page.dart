@@ -12,7 +12,7 @@ class LoginPage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 300,
+            height: 250,
             width: double.infinity,
             decoration: const BoxDecoration(
               color: Colors.blue,
@@ -77,21 +77,24 @@ class LoginPage extends StatelessWidget {
           const SizedBox(
             height: 2,
           ),
-          TextFormField(
-            onEditingComplete: () {},
-            style: const TextStyle(
-              color: Colors.grey,
-              fontWeight: FontWeight.bold,
-            ),
-            decoration: InputDecoration(
-              hintText: 'enter your phone number ',
-              hintStyle: const TextStyle(
-                fontSize: 10,
-                fontWeight: FontWeight.w600,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              onEditingComplete: () {},
+              style: const TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
               ),
-              contentPadding: const EdgeInsets.all(8),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(1),
+              decoration: InputDecoration(
+                hintText: 'enter your phone number ',
+                hintStyle: const TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                ),
+                contentPadding: const EdgeInsets.all(8),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
               ),
             ),
           ),
@@ -109,8 +112,10 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(30),
+            padding: const EdgeInsets.all(15),
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 CustomText(
                     text: 'Does not have any account ?',
