@@ -11,12 +11,24 @@ class RegisterPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            height: 150,
-            width: double.infinity,
-            decoration: const BoxDecoration(
-              color: Colors.blue,
-            ),
+          Stack(
+            children: [
+              Container(
+                height: 150,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Colors.blue,
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(30),
+                child: Icon(
+                  Icons.arrow_circle_left,
+                  color: Colors.black,
+                  size: 30,
+                ),
+              ),
+            ],
           ),
           const Align(
             alignment: Alignment.topLeft,
@@ -61,8 +73,37 @@ class RegisterPage extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            height: 5,
+          const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: CustomText(
+                text: 'Email',
+                textColor: Colors.black54,
+                fontSize: 14,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextFormField(
+              onEditingComplete: () {},
+              style: const TextStyle(
+                color: Colors.grey,
+                fontWeight: FontWeight.bold,
+              ),
+              decoration: InputDecoration(
+                hintText: 'enter your email ',
+                hintStyle: const TextStyle(
+                  fontSize: 10,
+                  fontWeight: FontWeight.w600,
+                ),
+                contentPadding: const EdgeInsets.all(8),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(1),
+                ),
+              ),
+            ),
           ),
           const Padding(
             padding: EdgeInsets.all(8.0),
