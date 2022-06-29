@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_1_project/login_page/Login_Page.dart';
+import 'package:task_1_project/pageview/Page_View.dart';
 import 'package:task_1_project/register_page/Register_Page.dart';
 
 
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home: const LoginPage(),
-      home: const RegisterPage(),
+      //home: const RegisterPage(),
+      home: const PView() ,
     );
   }
 }

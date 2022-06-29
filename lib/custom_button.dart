@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final Color buttonColor;
-
   final String buttonText;
   final Color textColor;
 
